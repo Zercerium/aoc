@@ -175,8 +175,6 @@ fn create_all_permutation() -> Vec<Vec<u8>> {
     let mut w = Vec::new();
     let len = wi.len() as u8 - 1;
     combinations(&wi, &mut ot, &mut w, 0, len, 0, 1);
-    // dbg!(&wi);
-    // dbg!(&w);
 
     // single or none armor
     let mut ai = (5..=9).collect::<Vec<u8>>();
@@ -184,7 +182,6 @@ fn create_all_permutation() -> Vec<Vec<u8>> {
     let mut a = Vec::new();
     let len = ai.len() as u8 - 1;
     combinations(&ai, &mut ot, &mut a, 0, len, 0, 1);
-    // dbg!(&a);
 
     // 0 - 2 rings
     let mut ri = (10..=15).collect::<Vec<u8>>();
@@ -193,9 +190,6 @@ fn create_all_permutation() -> Vec<Vec<u8>> {
     let mut r = Vec::new();
     let len = ri.len() as u8 - 1;
     combinations(&ri, &mut ot, &mut r, 0, len, 0, 2);
-    // dbg!(&r);
-
-    //sort for cost
 
     let mut all = Vec::new();
 
@@ -212,8 +206,6 @@ fn create_all_permutation() -> Vec<Vec<u8>> {
             }
         }
     }
-
-    // dbg!(&all);
 
     all
 }
